@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Digitales Franken – Mehr Kunden. Mehr Sichtbarkeit. Mehr Wirkung.",
+  title: "Digitales Franken – Mehr Sichtbarkeit. Mehr Kunden. Mehr Wirkung.",
   description:
-    "Digitale Full-Service Agentur aus Franken. Webdesign, SEO/SEA, Video, 3D Animation, Social Media und mehr.",
+    "Digitale Full-Service Agentur aus Franken. Webdesign, SEO, Video, 3D, Social Media – modern, regional, wirkungsvoll.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="dark">
+    <html lang="de">
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );

@@ -1,93 +1,91 @@
 "use client";
 
-const services = [
-  "WEBDESIGN",
-  "SEO/SEA",
-  "VIDEO/FILM",
-  "CGI/CGO",
-  "3D ANIMATION",
-  "SOCIAL MEDIA",
-  "PRINT",
-  "GRAFIK",
-  "FOTOGRAFIE",
-  "PODCAST",
-];
-
 export default function Hero() {
   return (
-    <section id="home" className="hero-gradient relative min-h-screen pt-20">
+    <section id="home" className="hero-bg relative min-h-screen flex items-center">
+      {/* Background animated video — blended into the hero */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="video-blend w-[800px] h-[800px] object-contain opacity-30 animate-float"
+        >
+          <source src="/logo.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Overlay gradient to darken edges */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-transparent to-dark-deep pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-transparent to-dark/80 pointer-events-none" />
+
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Column — Text */}
-          <div className="flex flex-col gap-8">
-            <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-                <span className="text-text-primary">CHANGELING </span>
-                <span className="text-red-accent italic">NEO</span>
-              </h1>
-            </div>
-
-            <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl">
-              Mehr Kunden. Mehr Sichtbarkeit. Mehr Wirkung. Wir sind Ihre
-              digitale Full-Service Agentur aus Franken. Von Webdesign über
-              SEO bis hin zu Video und 3D — wir bringen Ihr Unternehmen
-              digital nach vorne.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href="#kontakt"
-                className="btn-cyan px-8 py-3 text-base"
-              >
-                Jetzt starten
-              </a>
-              <a
-                href="#portfolio"
-                className="btn-outline-cyan px-8 py-3 text-base"
-              >
-                Portfolio ansehen
-              </a>
-            </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 lg:py-40 w-full">
+        <div className="max-w-2xl">
+          {/* Tag */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue/20 bg-blue/5 mb-8 animate-fade-in">
+            <span className="w-2 h-2 rounded-full bg-blue animate-pulse-glow" />
+            <span className="text-blue text-xs font-semibold tracking-widest uppercase">
+              Aus Franken, für Franken
+            </span>
           </div>
 
-          {/* Right Column — Services + Video */}
-          <div className="flex flex-col gap-10">
-            {/* Services Card */}
-            <div className="glass-card p-6 sm:p-8">
-              <ul className="flex flex-col gap-3">
-                {services.map((service) => (
-                  <li
-                    key={service}
-                    className="text-cyan text-sm sm:text-base font-semibold tracking-wide flex items-center gap-2"
-                  >
-                    <span className="text-cyan/60">›</span>
-                    {service}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+          {/* Headline */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 animate-fade-in-up">
+            <span className="text-light">Digitales</span>
+            <br />
+            <span className="text-blue text-glow">Franken</span>
+          </h1>
 
-        {/* Video Section */}
-        <div className="mt-16 sm:mt-24 flex justify-center">
-          <div className="relative w-full max-w-2xl aspect-video rounded-xl overflow-hidden">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="video-blend w-full h-full object-contain"
-            >
-              <source src="/logo.mp4" type="video/mp4" />
-            </video>
+          {/* Subline */}
+          <p className="text-xl sm:text-2xl text-blue-light font-semibold mb-4 animate-fade-in-up delay-100">
+            Mehr Sichtbarkeit. Mehr Kunden. Mehr Wirkung.
+          </p>
+
+          {/* Description */}
+          <p className="text-muted text-lg leading-relaxed max-w-xl mb-10 animate-fade-in-up delay-200">
+            Wir verbinden Technologie, Kreativität und regionale Identität. Moderne Weblösungen,
+            visuelle Innovation und zukunftsorientiertes Marketing — direkt aus der Region.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
+            <a href="#contact" className="btn-primary px-8 py-4 text-base">
+              Kostenloses Erstgespräch
+              <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#services" className="btn-outline px-8 py-4 text-base">
+              Unsere Leistungen
+            </a>
+          </div>
+
+          {/* Trust badges */}
+          <div className="flex flex-wrap items-center gap-6 mt-14 animate-fade-in-up delay-400">
+            <div className="flex items-center gap-2 text-subtle text-sm">
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              DSGVO-konform
+            </div>
+            <div className="flex items-center gap-2 text-subtle text-sm">
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              100% regional
+            </div>
+            <div className="flex items-center gap-2 text-subtle text-sm">
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+              Schnell & transparent
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-bg-primary to-transparent" />
     </section>
   );
 }
