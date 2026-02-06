@@ -1,98 +1,63 @@
 const services = [
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
-      </svg>
-    ),
+    d: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z",
     title: "Webdesign",
-    desc: "Individuell, performant & markenstark. Websites, die nicht nur gut aussehen — sondern verkaufen.",
+    text: "Individuell, performant & markenstark. Websites, die verkaufen.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <circle cx="11" cy="11" r="8" />
-        <path d="M21 21l-4.35-4.35" />
-        <path d="M8 11h6M11 8v6" />
-      </svg>
-    ),
+    d: "M10 21l-2-2m2 2l2-2m-2 2V3m0 0L8 5m2-2l2 2M3 10h18M3 14h18",
     title: "SEO / SEA",
-    desc: "Sichtbarkeit, die messbar wirkt. Organisch und bezahlt — wir bringen Sie auf Seite 1.",
+    text: "Sichtbarkeit, die messbar wirkt — organisch und bezahlt.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <polygon points="23,7 16,12 23,17" />
-        <rect x="1" y="5" width="15" height="14" rx="2" />
-      </svg>
-    ),
+    d: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M3 8h12v8H3z",
     title: "Video & Film",
-    desc: "Storytelling für digitale Kanäle. Imagefilme, Produktvideos und Social-Content.",
+    text: "Storytelling für digitale Kanäle. Image- und Produktfilme.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
-      </svg>
-    ),
+    d: "M14 2l-3 14 3 2 3-2-3-14zM7 14l3 2M17 14l-3 2M7 14L3 22h18l-4-8",
     title: "3D / CGI",
-    desc: "Visuelle Erlebnisse mit Tiefgang. 3D-Animationen und CGI für Produkte und Marken.",
+    text: "Visuelle Erlebnisse mit Tiefgang. Produkt- und Marken-3D.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
-        <path d="M13.73 21a2 2 0 01-3.46 0" />
-      </svg>
-    ),
+    d: "M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z",
     title: "Social Media",
-    desc: "Reichweite mit Strategie. Community-Building, Content-Planung und Ads-Management.",
+    text: "Reichweite mit Strategie — Community und Ads-Management.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 19l7-7 3 3-7 7-3-3z" />
-        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-        <path d="M2 2l7.586 7.586" />
-        <circle cx="11" cy="11" r="2" />
-      </svg>
-    ),
+    d: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
     title: "Grafik & Print",
-    desc: "Design, das im Kopf bleibt. Logos, Flyer, Verpackungen — analog und digital.",
+    text: "Design, das im Kopf bleibt. Logos, Flyer, Verpackungen.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="section-dark py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <span className="text-blue text-sm font-semibold tracking-widest uppercase">
-            Was wir bieten
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-light mt-3 mb-5">
-            Unsere Leistungen
+    <section id="services" className="relative py-28 lg:py-36">
+      <div className="max-w-7xl mx-auto px-8">
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <span className="text-blue text-[11px] font-semibold tracking-[0.25em] uppercase">Leistungen</span>
+          <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-light mt-3 mb-5 leading-tight">
+            Alles aus einer Hand —<br />
+            <span className="gradient-text">Strategie bis Umsetzung.</span>
           </h2>
-          <p className="text-muted text-lg max-w-2xl mx-auto">
-            Alles aus einer Hand — von der Strategie bis zur Umsetzung.
-            Digital & regional, immer mit Fokus auf Ihren Erfolg.
+          <p className="text-muted text-[16px] leading-relaxed">
+            Digitale Lösungen, die Ihren Umsatz steigern. Jede Leistung zielt auf messbaren Erfolg.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
-            <div
-              key={s.title}
-              className={`glass-card p-8 flex flex-col gap-5 opacity-0 animate-fade-in-up delay-${(i + 1) * 100}`}
-            >
-              <div className="text-blue">{s.icon}</div>
-              <h3 className="text-xl font-bold text-light">{s.title}</h3>
-              <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((s) => (
+            <div key={s.title} className="glass-card p-7 group">
+              <div className="icon-circle mb-5">
+                <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" className="text-blue">
+                  <path d={s.d} />
+                </svg>
+              </div>
+              <h3 className="text-light text-[17px] font-bold mb-2.5">{s.title}</h3>
+              <p className="text-muted text-[14px] leading-relaxed">{s.text}</p>
             </div>
           ))}
         </div>

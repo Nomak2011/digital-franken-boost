@@ -14,13 +14,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <div className="section-divider" />
+        <div className="neon-line" />
         <Services />
-        <div className="section-divider" />
+        <div className="neon-line" />
         <PainSolution />
-        <div className="section-divider" />
+        <div className="neon-line" />
         <About />
-        <div className="section-divider" />
+        <div className="neon-line" />
         <CtaSection />
       </main>
       <Footer />
